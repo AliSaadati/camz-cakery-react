@@ -1,0 +1,14 @@
+@media (max-width: 600px) {
+.Mobile {
+    position: fixed;
+    width: 300px;
+    max-width: 70%;
+    height: 150px;
+    top: 65px;
+    left: 0;
+}
+}
+
+.Mobile {
+    display: none;
+}
