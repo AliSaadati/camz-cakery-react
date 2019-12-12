@@ -1,14 +1,25 @@
-a {
+li {
     flex: 1;
-    color: white;
     padding: 0 10px;
-    text-decoration: none;
 
     /* min-width: 1px; */
     text-align: center;
-    transition: .2s;
+    list-style: none;
 }
 
-a:focus, a:hover {
+li a:focus, li a:hover {
     color: rgb(253, 199, 199);
+}
+
+li a {
+    text-decoration: none;
+    color: white;    
+    transition: 0s;
+
+}
+
+@media (max-width: 600px) {
+    li a {
+        font-size: 2.5em;
+    }
 }

@@ -3,17 +3,9 @@ import classes from './Hamburger.module.css';
 
 class Hamburger extends Component {
 
-    state = {
-        isToggle: false
-    }
-
-    toggleMenuHandler = () => {
-        this.setState({isToggle: !this.state.isToggle});
-    }
-
     render() {
-        
-        let toggleMenuClass = this.state.isToggle ? 
+
+        let toggleMenuClass = this.props.menuIsOpen ? 
             [classes['is-active'], classes.hamburger, classes['hamburger-elastic']] : 
             [classes.hamburger, classes['hamburger-elastic']];
 
@@ -23,7 +15,7 @@ class Hamburger extends Component {
                 type="button"
                 aria-label="Menu"
                 aria-controls="navigation"
-                onClick={this.toggleMenuHandler}>
+                onClick={() => {this.props.toggleBurger()}}>
                 <span className={classes["hamburger-box"]}>
                     <span className={classes["hamburger-inner"]}></span>
                 </span>

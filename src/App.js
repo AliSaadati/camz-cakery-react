@@ -1,11 +1,16 @@
 import React from 'react';
+
+import Parallax from './Components/Parallax/Parallax'
 import Toolbar from './Components/Toolbar/Toolbar';
-import './App.module.css';
+import classes from './App.module.css';
+
+
 
 function App() {
   return (
-    <div className="App">
+    <div className={classes.App}>
       <Toolbar></Toolbar>
+      <Parallax></Parallax>
     </div>
   );
 }

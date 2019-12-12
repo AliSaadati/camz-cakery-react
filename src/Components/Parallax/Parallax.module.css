@@ -1,0 +1,70 @@
+.Parallax {
+    position: absolute;
+    height: 100%;
+}
+
+div.Parallax {
+    height: 100%;
+    margin: 0;
+    font-size: 16px;
+    font-family: 'helvetica', sans-serif;
+    font-weight: 400;
+    line-height: 1.8em;
+    color: #666;
+}
+
+.pimg1, .pimg2, .pimg3 {
+    position: relative;
+    opacity: .5;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.pimg1 {
+    background-image: url('../../assets/images/cupcake-bg.jpg');
+    min-height: 100%;
+}
+
+.pimg2 {
+    background-image: url('../../assets/images/chocolate-cupcakes-bg.jpg');
+    min-height: 400px;
+}
+
+.pimg3 {
+    background-image: url('../../assets/images/cupcake-bg.jpg');
+    min-height: 400px;
+}
+
+.section {
+    text-align: center;
+    padding: 50px 80px;
+}
+
+.sectionLight {
+    background-color: #f4f4f4;
+    color: #666;
+}
+
+.sectionDark {
+    background-color: #282e34;
+    color: #ddd;
+}
+
+.ptext{
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    text-align: center;
+    color: black;
+    font-size: 27px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.ptext .border {
+    background-color: #111;
+    color: white;
+    padding: 29px;
+}

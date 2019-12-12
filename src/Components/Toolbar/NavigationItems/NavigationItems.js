@@ -12,18 +12,20 @@ const navigationItems = (props) => {
                     navItemName={props.navItems[navKey]}></NavigationItem>
             )
         });
+
     let logoPosition = 0;
-    if (props.centeredLogo) logoPosition = navItems.length % 2;
+
+    if (props.centeredLogo) logoPosition = navItems.length / 2;
         // if (navItems.length % 2 === 1) {
         // navItems.push(<div
         //     key={navItems.length+1}
         //     ></div>);
         // }
-        navItems.splice(logoPosition, 0, <Logo key={navItems.length + 2}/>)
+        navItems.splice(logoPosition, 0, props.children)
 
     
     return (
-        <nav className={classes.Desktop}>
+        <nav className={!props.menuIsOpen ? classes.Hide : null}>
             {navItems}
         </nav>
     )
