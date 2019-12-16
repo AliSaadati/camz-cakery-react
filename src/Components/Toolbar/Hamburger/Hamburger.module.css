@@ -1,6 +1,8 @@
 .hamburger {
     padding: 10px 10px;
-    display: inline-block;
+    /* flex: 1; */
+    /* flex-direction: row; */
+    align-items: center;
     cursor: pointer;
     transition-property: opacity, filter;
     transition-duration: 0.15s;
@@ -11,8 +13,6 @@
     background-color: transparent;
     border: 0;
     margin: 0;
-    overflow: visible;
-    order: 0; /* flexbox order - appears first in row */
     z-index: 50;
 }
 
@@ -96,7 +96,7 @@
     transition-delay: 0.075s;
 }
 
-@media (min-width: 600px) {
+@media (min-width: 749px) {
     .hamburger {
         display: none;
         transition: none;

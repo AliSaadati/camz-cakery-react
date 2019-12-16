@@ -1,8 +1,9 @@
 import React from 'react'
-import image from './red-circle.png';
+import image from '../../../assets/images/cupcake-logo-trans.png'
+import classes from './Logo.module.scss';
 
 const logo = (props) => (
-    <img src={image} />
+    <img className={classes.Logo} src={image} />
 )
 
 export default logo;

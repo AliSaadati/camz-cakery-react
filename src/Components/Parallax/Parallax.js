@@ -3,7 +3,7 @@ import React from 'react'
 import cupcake from '../../assets/images/cupcake-bg.jpg';
 import chocCupcake from '../../assets/images/chocolate-cupcakes-bg.jpg';
 
-import classes from './Parallax.module.css'
+import classes from './Parallax.module.scss'
 
 const parallax = (props) => {
     {/* <img className={classes.Image} src={cupcake} alt="cupcake"/> */ }
@@ -13,7 +13,7 @@ const parallax = (props) => {
 
             <div className={classes.pimg1}>
                 <div className={classes.ptext}>
-                    <span className={classes.border}>Parallax Website</span>
+                    <span className={classes.border}>Camille's Cakery</span>
                 </div>
             </div>
 

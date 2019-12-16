@@ -1,14 +1,14 @@
 import React from 'react'
-import classes from './NavigationItem.module.css';
+import classes from './NavigationItem.module.scss';
 
 const navigationItem = (props) => {
 
     return (
-        <li>
-            <a href={props.navItemName + "/"}
-                key={props.navKey}> {props.navItemName}
-            </a >
-        </li>
+        <div className={classes.Wrapper}>
+        <a className={classes.NavItem} href={props.navItemName + "/"}
+            key={props.navKey}> {props.navItemName}
+        </a >
+        </div>
     )
 }
 

@@ -7,26 +7,31 @@ const navigationItems = (props) => {
     const navItems = Object.keys(props.navItems)
         .map(navKey => {
             return (
-                <NavigationItem
-                    key={navKey}
-                    navItemName={props.navItems[navKey]}></NavigationItem>
+                <li className={classes.ListItem}>
+                    <NavigationItem
+                        key={navKey}
+                        navItemName={props.navItems[navKey]}>
+                    </NavigationItem>
+                </li>
             )
         });
 
     let logoPosition = 0;
 
     if (props.centeredLogo) logoPosition = navItems.length / 2;
-        // if (navItems.length % 2 === 1) {
-        // navItems.push(<div
-        //     key={navItems.length+1}
-        //     ></div>);
-        // }
-        navItems.splice(logoPosition, 0, props.children)
+    // if (navItems.length % 2 === 1) {
+    // navItems.push(<div
+    //     key={navItems.length+1}
+    //     ></div>);
+    // }
+    navItems.splice(logoPosition, 0, <li className={classes.ListItem}>{props.children}</li>)
 
-    
+
     return (
-        <nav className={!props.menuIsOpen ? classes.Hide : null}>
-            {navItems}
+        <nav className={[classes.Menu, (!props.menuIsOpen ? classes.Hide : null)].join(" ")}>
+            <ul className={classes.List}>
+                {navItems}
+            </ul>
         </nav>
     )
 };

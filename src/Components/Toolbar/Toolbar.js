@@ -4,7 +4,7 @@ import Hamburger from '../Toolbar/Hamburger/Hamburger'
 import NavigationItems from '../Toolbar/NavigationItems/NavigationItems';
 import SideDrawer from '../Toolbar/SideDrawer/SideDrawer';
 import Logo from './Logo/Logo';
-const navItems = ['Home', 'Packages', 'Products', 'Gallery', 'Contact'];
+const navItems = ['Packages', 'Products', 'Gallery', 'Contact'];
 
 class Toolbar extends Component {
     constructor(props) {
