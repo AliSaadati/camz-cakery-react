@@ -1,0 +1,66 @@
+.PackagesContainer {
+    position: relative;
+    top: 70%;
+    grid-template-columns: 100%;
+    column-gap: 0;
+    margin: 10%;
+    color: #400547;
+    text-align: center;
+}
+
+.PackageCard {
+    text-align: left;
+    border-radius: 20px;
+    border: 2px solid #444444;
+    box-shadow: 10px 11px 2px 3px rgb(247, 240, 255);
+    padding: 2.5% 5%;
+    background-color: #ffffff;
+    margin: 2.5%;
+    min-width: 370px;
+    display: inline-block;
+    width: 33%
+}
+
+.PackageCard *,
+.PackagesContainer * {
+
+    list-style-type: none;
+    line-height: 1.5em;
+}
+
+.PackageTitle {
+    color: #bf922b;
+}
+
+.PackageList {
+    padding-left: 0;
+}
+.PackageList li {
+    vertical-align: middle;
+}
+
+.PackageAddOnContainer {
+    text-align: center;
+    display: inline-block;
+    padding:0;
+}
+
+.PackageAddOnListItem {
+    text-align: left;
+}
+
+.Dollar {
+    display: inline-block;
+    font-size: 11em;
+    margin:0;
+    font-weight: 100;
+    padding-right: 1em;
+}
+
+.Icon {
+    width: 20px;
+    display: inline-block;
+    border-radius: 20px;
+    vertical-align: middle;
+    padding: 0 5px;
+}

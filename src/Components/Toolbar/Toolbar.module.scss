@@ -1,0 +1,54 @@
+@import '../../assets/Stylesheets/variables.module';
+
+.ToolbarContainer {
+    width: 100%;
+    height: map-get($Navigation, ToolbarHeight);
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    z-index: 100;
+    background-color: #ffffffe8;
+    // background-image: linear-gradient(
+    //     #ffffff, 
+    //     #ffffffbb 19%, 
+    //     #ffffff8a 34%, 
+    //     #ffffff62 47%, 
+    //     #ffffff48 56.5%, 
+    //     #ffffff30 65%, 
+    //     #ffffff20 73%, 
+    //     #ffffff12 80.2%, 
+    //     #ffffff0b 86.1%, 
+    //     #ffffff05 91%, 
+    //     #ffffff02 95.2%, 
+    //     #ffffff01 98.2%,  
+    //     #ffffff00);
+
+}
+
+.Toolbar {
+    max-width: 1000px;
+    width: 90%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+    box-sizing: border-box;
+    flex: 1;
+
+}
+
+.Logo {
+    margin: 10px 0;
+}
+
+@media (max-width: 750px) {
+
+    .ToolbarContainer {
+        height: 70px;
+    }
+
+    .Toolbar {
+        width: 100%;
+        justify-content: space-between;
+    }
+}

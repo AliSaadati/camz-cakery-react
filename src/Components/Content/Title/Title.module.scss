@@ -1,0 +1,41 @@
+@import '../../../assets/Stylesheets/variables.module';
+
+.Title {
+    position: relative;
+    height: 70%;
+    width: 100%;
+    background-size:cover;
+    background-image: url("/images/products/bg-cupcakes-purple-blue2-tiltshift.jpg");
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+}
+
+.TitleTextContainer {
+    padding: 25em 0;
+}
+
+.TitleTextBar {
+    background-color: #ffffff33;
+    height: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.TitleText {
+    margin: 0;
+    background-color: #ffffff33;
+    display: inline-block;
+    padding: 0 1em;
+    font-size: 6em;
+    color: #333333;
+}
+
+@media (min-width: 1001px) {
+    .TitleText {
+    }
+}
+

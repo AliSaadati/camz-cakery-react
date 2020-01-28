@@ -1,0 +1,104 @@
+.Contact {}
+
+.Contact ul {
+    padding: 1em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Contact ul li {
+    list-style-type: none;
+    margin: 1em;
+    position: relative;
+    float: left;
+}
+
+.Contact ul li .Media {
+    max-height: 50px;
+    max-width: 50px;
+    transition: .15s;
+}
+
+.Contact ul li .Media:hover {
+    transform: scale(1.4, 1.4);
+    transition: .2s;
+}
+
+.MediaWrapper {
+    visibility: hidden;
+}
+
+.Contact ul li .ShowMedia {
+    visibility: visible;
+    animation: surface 1.3s linear 1 forwards;
+}
+
+p.FootText {
+    text-align: center;
+    margin-top: -30px;
+    padding: 10px 0px 10px 0px;
+    font-size: .7em;
+}
+
+p strong {
+    font-size: inherit;
+}
+
+.Contact header {
+    text-align: center;
+}
+
+.Contact h2 {
+    padding-top: 0;
+    margin-top: 0;
+}
+/***** Animations *****/
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes surface {
+    0% {
+        transform: translateY(200%);
+        animation-timing-function: cubic-bezier(0, .92, .69, .99);
+    }
+    30% {
+        transform: translateY(-64%);
+        animation-timing-function: cubic-bezier(.69, .01, .99, .58);
+    }
+    50% {
+        transform: translateY(32%);
+        animation-timing-function: cubic-bezier(.01, .42, .83, 1);
+    }
+    65% {
+        transform: translateY(-32%);
+        animation-timing-function: cubic-bezier(.36, .01, 1, .83);
+    }
+    75% {
+        transform: translateY(16%);
+        animation-timing-function: cubic-bezier(0, .92, .69, .99);
+    }
+    85% {
+        transform: translateY(-8%);
+        animation-timing-function: cubic-bezier(.26, .02, .99, .66);
+    }
+    93% {
+        transform: translateY(8%);
+        animation-timing-function: cubic-bezier(0, .92, .69, .99);
+    }
+    100% {
+        transform: translateY(0%);
+        animation-timing-function: cubic-bezier(.97, .01, .99, .61);
+    }
+}

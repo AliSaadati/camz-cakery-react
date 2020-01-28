@@ -5,7 +5,7 @@ class Hamburger extends Component {
 
     render() {
 
-        let toggleMenuClass = this.props.menuIsOpen ? 
+        let toggleMenuClass = this.props.sideMenuIsOpen ? 
             [classes['is-active'], classes.hamburger, classes['hamburger-elastic']] : 
             [classes.hamburger, classes['hamburger-elastic']];
 

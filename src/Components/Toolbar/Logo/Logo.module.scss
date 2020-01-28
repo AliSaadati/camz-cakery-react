@@ -1,6 +1,52 @@
+@import '../../../assets/Stylesheets/variables.module';
+
 .Logo {
-    max-height: 70px;
-    max-width: auto;
+    max-height: 130px;
     display: block;
-    padding:0 26px;
+    position: relative;
+    margin: auto;
+    line-height: 130px;
+    // transform: rotateY(0deg) rotate(-45deg) ; /* needs Y at 0 deg to behave properly*/
 }
+
+@media (max-width: 1001px) {
+    .Logo {
+        height: map-get($Navigation, ToobarHeight);
+    }
+}
+
+
+/****** Logo in diamond box *****/
+// .Logo {
+//     max-height: 100px;
+//     max-width: auto;
+//     display: block;
+//     padding:0 26px;
+//     top: 25px;
+//     position: relative;
+//     // border-radius: 45px;
+//     margin: auto;
+//     transform: rotateY(0deg) rotate(-45deg) ; /* needs Y at 0 deg to behave properly*/
+
+// }
+
+// .LogoContainer {
+//     height: 150px;
+//     width: 150px;
+//     background-color: #ddd7c6;
+//     border-radius: 10px;
+//     text-align: center;
+//     display: block;
+//     transform: rotateY(0deg) rotate(45deg); /* needs Y at 0 deg to behave properly*/
+//     z-index: 10;
+
+// }
+
+// @media (max-width: 750px) {
+    // .LogoContainer {
+    //     transform: rotateY(0deg) rotate(45deg); /* needs Y at 0 deg to behave properly*/
+
+    // }
+// }
+
+/***************************/

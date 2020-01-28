@@ -1,0 +1,22 @@
+.my-gallery-class {
+    margin: 30px auto;
+}
+
+.my-bg-image-el {
+    background-color: red;
+}
+
+.ImageContainer img {
+    width: 300px;
+    border-radius: 8px;
+  }
+
+  .ImageContainer {
+    margin: 10px 0;
+    list-style-type: none;
+  }
+
+  .ImageContainer:hover {
+      opacity: .5;
+
+  }

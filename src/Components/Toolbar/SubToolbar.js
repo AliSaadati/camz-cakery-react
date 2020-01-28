@@ -1,21 +1,24 @@
 import React, { Component } from 'react';
-import classes from './Toolbar.module.scss';
-import Hamburger from '../Toolbar/Hamburger/Hamburger'
-import NavigationItems from '../Toolbar/NavigationItems/NavigationItems';
+import classes from './SubToolbar.module.scss';
+import Hamburger from './Hamburger/Hamburger'
+import NavigationItems from './NavigationItems/NavigationItems';
 import Logo from './Logo/Logo';
+import Aux from '../../Hoc/Aux'
 
 const navItems = ['Story', 'Packages', {'Products': ['Cookies', 'Cupcakes', 'Cakepops', 'Cakes', 'Sweet Treats', 'Keto Friendly']}, 'Gallery', 'Contact', 'Reviews'];
 
-class Toolbar extends Component {
+class SubToolbar extends Component {
 
     componentDidMount() {
         this.updateBurgerState();
         window.addEventListener('resize', this.updateBurgerState.bind(this));
+        window.addEventListener('scroll', this.updateToolbarScrollPosition.bind(this))
     }
     
     state = {
         showBurgerMenu: false,
-        burgerIconDisplayed: true
+        burgerIconDisplayed: true,
+        showToolbar: false
     }
 
     updateBurgerState() {
@@ -23,6 +26,17 @@ class Toolbar extends Component {
             this.hideBurgerMenu();
         }
         else this.displayBurgerIcon();
+    }
+
+    updateToolbarScrollPosition() {
+        var topofDiv = document.getElementById("Hero").offsetTop; //gets offset of header
+        var height = document.getElementById("Hero").offsetHeight; //gets height of header
+        if (window.scrollY >= topofDiv + height && !this.state.showToolbar){
+            this.setState({showToolbar: true})
+        }
+        if (window.scrollY < topofDiv + height && this.state.showToolbar) {
+            this.setState({showToolbar: false})
+        }
     }
 
     toggleBurger = () => {
@@ -40,8 +54,14 @@ class Toolbar extends Component {
     }
 
     render() {
+        let toolbarClasses = [classes.ToolbarContainer];
+
+        if (this.state.showToolbar) 
+            toolbarClasses = [classes.ToolbarContainer, classes.Display]
+        
         return (
-            <div className={classes.ToolbarContainer}>
+            <Aux>
+                <div className={toolbarClasses.join(" ")}>
                 <header className={classes.Toolbar} >
                     <Hamburger
                         toggleBurger={this.toggleBurger}
@@ -53,15 +73,15 @@ class Toolbar extends Component {
                         sideMenuIsOpen={this.state.showBurgerMenu}
                         burgerIconDisplayed={this.state.burgerIconDisplayed}>
                         <Logo 
-                            className={classes.Logo}
-                            height="130px"
-                            />
-                    </ NavigationItems>
+                            height="50px"
+                            source="/images/logos/Cakery-Logo-NoText.png"/>
+                    </NavigationItems>
 
                 </header>
-            </div>
+            </div> 
+            </Aux>
         )
     }
 }
 
-export default Toolbar;
+export default SubToolbar;
